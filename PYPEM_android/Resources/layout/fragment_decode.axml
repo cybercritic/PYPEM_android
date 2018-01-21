@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="From:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="8dp"
+        android:id="@+id/tvDecStatic" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDecStatic"
+        android:paddingLeft="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvDecFromPK" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDecFromPK"
+        android:paddingLeft="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvDecFromName" />
+    <ImageButton
+        android:src="@drawable/ic_action_add_person"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="-4dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/tvDecFromName"
+        android:id="@+id/imContactSave"
+        android:onClick="OnAddContactEmailClick" />
+    <ImageButton
+        android:src="@drawable/ic_action_reply"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="-4dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/tvDecFromName"
+        android:layout_toRightOf="@id/imContactSave"
+        android:id="@+id/imContactReply"
+        android:onClick="OnReplyEmailClick" />
+    <ImageButton
+        android:src="@drawable/ic_action_forward"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="-4dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/tvDecFromName"
+        android:layout_toRightOf="@id/imContactReply"
+        android:id="@+id/imContactForward"
+        android:onClick="OnForwardEmailClick" />
+    <ImageButton
+        android:src="@drawable/ic_action_not_secure"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imDecryptEmail"
+        android:onClick="OnDecryptEmailClick" />
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imContactSave"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|left"
+        android:id="@+id/tvDecryptTitle" />
+    <EditText
+        android:hint="Paste encrypted email here."
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tvDecryptTitle"
+        android:layout_above="@id/imDecryptEmail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/border_shape"
+        android:gravity="top|left"
+        android:padding="10dp"
+        android:id="@+id/edDecryptContent" />
+</RelativeLayout>

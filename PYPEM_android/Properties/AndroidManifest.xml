@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="cybercritics.pypem_android" android:versionCode="13" android:installLocation="auto" android:versionName="from_to">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="PYPEM" android:icon="@drawable/Icon" android:debuggable="false" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+		<activity android:name="pypem_android.MainActivity" android:configChanges="orientation" android:screenOrientation="portrait" android:label="@string/ApplicationName" android:windowSoftInputMode="adjustPan|stateHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter android:label="PYPEM">
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http" android:host="pypem.com" android:pathPrefix="/app" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>

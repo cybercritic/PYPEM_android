@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">PYPEM</string>
+    <string name="action_settings">ACTION SETTINGS</string>
+    <string name="server_explain">Using the server will guarantee to the recipient that you have sent the email.</string>
+</resources>

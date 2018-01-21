@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_shape"
+    android:layout_margin="2dp"
+    android:clickable="true"
+    android:id="@+id/rlInboxEntry">
+    <ImageButton
+        android:src="@drawable/ic_action_remove"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="48dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:id="@+id/imInboxEmailDelete" />
+    <TextView
+        android:text="TIME/DATE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/imInboxEmailDelete"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvInboxEmailTime" />
+    <TextView
+        android:text="FROM"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/tvInboxEmailTime"
+        android:layout_toLeftOf="@id/imInboxEmailDelete"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvInboxEmailFrom" />
+    <TextView
+        android:text="TITLE"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/imInboxEmailDelete"
+        android:layout_below="@id/tvInboxEmailFrom"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvInboxEmailTitle" />
+</RelativeLayout>

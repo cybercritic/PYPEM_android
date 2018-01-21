@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_shape"
+    android:layout_margin="2dp"
+    android:clickable="true"
+    android:id="@+id/rlContactEntry">
+    <ImageButton
+        android:src="@drawable/ic_action_edit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:id="@+id/imContactEditID" />
+    <ImageButton
+        android:src="@drawable/ic_action_share"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="-4dp"
+        android:scaleType="fitCenter"
+        android:layout_toLeftOf="@id/imContactEditID"
+        android:id="@+id/imContactShare" />
+    <ImageButton
+        android:src="@drawable/ic_action_copy"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-8dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/imContactEditID"
+        android:id="@+id/imContactCopyPK" />
+    <ImageButton
+        android:src="@drawable/ic_action_remove"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginRight="-4dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/imContactEditID"
+        android:layout_toLeftOf="@id/imContactCopyPK"
+        android:id="@+id/imContactDelete" />
+    <TextView
+        android:text="ID"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/imContactShare"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvID" />
+    <TextView
+        android:text="PK"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imContactEditID"
+        android:layout_toLeftOf="@id/imContactDelete"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/tvPK" />
+</RelativeLayout>
